@@ -1,0 +1,42 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BOE-VFD48-1202FN
+D VFD Round Clock
+K VFD Round Clock
+$ENDCMP
+#
+$CMP CH340G
+D USB to Serial
+K USB Serial RX TX
+$ENDCMP
+#
+$CMP DCF1
+D Pollin DCF-Empfangsmodul
+K DCF DCF77 3V
+$ENDCMP
+#
+$CMP DS3231MZ
+D I2C Real-Time Clock
+K RTC I2C 5PPM Temp Sensor
+$ENDCMP
+#
+$CMP FM24C04A
+D 4Kb FRAM Serial Memory
+K Ferroelectric Nonvolatile RAM I2C
+$ENDCMP
+#
+$CMP PT6315
+D Vacuum Fluorescent Display (VFD) Controller Driver
+K VFD Controller Driver
+$ENDCMP
+#
+$CMP SN74LVC1G04
+D 1x Inverter Gate
+$ENDCMP
+#
+$CMP ИB-22
+D ИB-22 VFD Digit Tube
+K ИB-22 IV-22 VFD Digit Tube
+$ENDCMP
+#
+#End Doc Library
