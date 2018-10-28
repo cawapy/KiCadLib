@@ -30,6 +30,11 @@ D 4Kb FRAM Serial Memory
 K Ferroelectric Nonvolatile RAM I2C
 $ENDCMP
 #
+$CMP Itron-MC03216
+D 32x16 VFD DotMatrix Display
+K VFD ISE Noritake Itron
+$ENDCMP
+#
 $CMP PT6315
 D Vacuum Fluorescent Display (VFD) Controller Driver
 K VFD Controller Driver
