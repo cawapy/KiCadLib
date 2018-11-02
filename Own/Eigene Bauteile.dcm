@@ -44,6 +44,10 @@ $CMP SN74LVC1G04
 D 1x Inverter Gate
 $ENDCMP
 #
+$CMP UFP2810
+D Control and Supply Interface for FP2800A
+$ENDCMP
+#
 $CMP ИB-22
 D ИB-22 VFD Digit Tube
 K ИB-22 IV-22 VFD Digit Tube
