@@ -582,6 +582,7 @@ F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  Pin_Header_Straight_Shrouded_2x05_Pitch2.54mm
+ Own:Pin_Header_Angle_Shrouded_2x05_Pitch2.54mm
 $ENDFPLIST
 DRAW
 S -200 300 200 -300 1 1 10 f
