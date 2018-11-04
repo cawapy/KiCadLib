@@ -35,6 +35,11 @@ D 32x16 VFD DotMatrix Display
 K VFD ISE Noritake Itron
 $ENDCMP
 #
+$CMP Jumper_Cross
+D 2x2 Cross Jumper
+K Jumper Cross
+$ENDCMP
+#
 $CMP PT6315
 D Vacuum Fluorescent Display (VFD) Controller Driver
 K VFD Controller Driver
