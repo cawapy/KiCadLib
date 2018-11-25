@@ -1,4 +1,4 @@
-(module FlipsLogo-Mittel (layer F.Cu) (tedit 5BEC98B7)
+(module FlipsLogo-Mittel (layer F.Cu) (tedit 5BFABBCA)
   (fp_text reference REF** (at 0 3.81) (layer F.Fab) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -12,7 +12,7 @@
   (fp_line (start 2.286 0) (end 3.048 -0.762) (layer F.SilkS) (width 0.1))
   (fp_line (start 3.048 -0.762) (end 3.048 -1.905) (layer F.SilkS) (width 0.1))
   (fp_line (start 3.048 -1.905) (end 2.286 -2.667) (layer F.SilkS) (width 0.1))
-  (fp_line (start 2.159 -2.667) (end 1.143 -2.667) (layer F.SilkS) (width 0.1))
+  (fp_line (start 2.286 -2.667) (end 1.143 -2.667) (layer F.SilkS) (width 0.1))
   (fp_line (start 1.143 -2.667) (end 0.381 -1.905) (layer F.SilkS) (width 0.1))
   (fp_line (start 0.381 -1.905) (end 0.381 -0.762) (layer F.SilkS) (width 0.1))
   (fp_line (start 0.381 -0.762) (end 1.143 0) (layer F.SilkS) (width 0.1))
