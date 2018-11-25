@@ -8,6 +8,7 @@ rem var isAngle = WScript.Arguments(3);
 rem
 
 
+cscript /nologo %~dpn0.js 2  3 "" "" > Own.pretty\Pin_Header_Straight_Shrouded_2x03_Pitch2.54mm_ConvNumbering.kicad_mod
 cscript /nologo %~dpn0.js 2  4 "" "" > Own.pretty\Pin_Header_Straight_Shrouded_2x04_Pitch2.54mm_ConvNumbering.kicad_mod
 cscript /nologo %~dpn0.js 2  5 "" "" > Own.pretty\Pin_Header_Straight_Shrouded_2x05_Pitch2.54mm_ConvNumbering.kicad_mod
 cscript /nologo %~dpn0.js 2  6 "" "" > Own.pretty\Pin_Header_Straight_Shrouded_2x06_Pitch2.54mm_ConvNumbering.kicad_mod
@@ -36,6 +37,7 @@ cscript /nologo %~dpn0.js 2 28 "" "" > Own.pretty\Pin_Header_Straight_Shrouded_2
 cscript /nologo %~dpn0.js 2 29 "" "" > Own.pretty\Pin_Header_Straight_Shrouded_2x29_Pitch2.54mm_ConvNumbering.kicad_mod
 cscript /nologo %~dpn0.js 2 30 "" "" > Own.pretty\Pin_Header_Straight_Shrouded_2x30_Pitch2.54mm_ConvNumbering.kicad_mod
 
+cscript /nologo %~dpn0.js 2  3 "" "x" > Own.pretty\Pin_Header_Angle_Shrouded_2x03_Pitch2.54mm_ConvNumbering.kicad_mod
 cscript /nologo %~dpn0.js 2  4 "" "x" > Own.pretty\Pin_Header_Angle_Shrouded_2x04_Pitch2.54mm_ConvNumbering.kicad_mod
 cscript /nologo %~dpn0.js 2  5 "" "x" > Own.pretty\Pin_Header_Angle_Shrouded_2x05_Pitch2.54mm_ConvNumbering.kicad_mod
 cscript /nologo %~dpn0.js 2  6 "" "x" > Own.pretty\Pin_Header_Angle_Shrouded_2x06_Pitch2.54mm_ConvNumbering.kicad_mod
