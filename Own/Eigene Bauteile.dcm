@@ -15,6 +15,12 @@ D USB to Serial
 K USB Serial RX TX
 $ENDCMP
 #
+$CMP Conn_02x32_Row_Letter_First_A_C
+D Generic connector, double row, 02x32, row letter first pin numbering scheme (pin number consists of a letter for the row and a number for the pin index in this row. A1, ..., AN; C1, ..., CN), taken and adapted from script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
 $CMP DCF1
 D Pollin DCF-Empfangsmodul
 K DCF DCF77 3V
