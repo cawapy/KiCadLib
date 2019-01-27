@@ -13,6 +13,7 @@ var numberPadsX = WScript.Arguments(0);
 var numberPadsY = WScript.Arguments(1);
 var alternativeNumbering = WScript.Arguments(2);
 var isAngle = WScript.Arguments(3);
+var isLocked = WScript.Arguments(4);
 
 var padSizeMm = 1.6;
 var rasterMm = 2.54;
@@ -36,6 +37,9 @@ if (alternativeNumbering) {
     Numbering = "AltNumbering";
 }
 
+LocksVsNoLocks = isLocked ? "Locks_" : "";
+locksVsNoLocks = isLocked ? " with locks" : "";
+
 function pad2(number) {
     return (number < 10 ? "0" : "") + number;
 }
@@ -43,13 +47,13 @@ function pad2(number) {
 var centerX = (numberPadsX-1) * rasterMm / 2;
 var centerY = (numberPadsY-1) * rasterMm / 2;
 
-WScript.Echo("(module Pin_Header_"+StraightVsAngle+"_Shrouded_"+numberPadsX+"x"+pad2(numberPadsY)+"_Pitch"+rasterMm+"mm_"+Numbering+" (layer F.Cu) (tedit 5BDC1C8B)");
-WScript.Echo("  (descr \"Through hole shrouded "+straightVsAngle+" pin header, "+numberPadsX+"x"+pad2(numberPadsY)+", "+rasterMm+"mm pitch, double rows, "+numbering+"\")");
-WScript.Echo("  (tags \"Through hole shrouded "+straightVsAngle+" pin header THT "+numberPadsX+"x"+pad2(numberPadsY)+" "+rasterMm+"mm double row, "+numbering+"\")");
+WScript.Echo("(module Pin_Header_"+StraightVsAngle+"_Shrouded_"+LocksVsNoLocks+numberPadsX+"x"+pad2(numberPadsY)+"_Pitch"+rasterMm+"mm_"+Numbering+" (layer F.Cu) (tedit 5BDC1C8B)");
+WScript.Echo("  (descr \"Through hole shrouded "+straightVsAngle+" pin header"+locksVsNoLocks+", "+numberPadsX+"x"+pad2(numberPadsY)+", "+rasterMm+"mm pitch, double rows, "+numbering+"\")");
+WScript.Echo("  (tags \"Through hole shrouded "+straightVsAngle+" pin header"+locksVsNoLocks+" THT "+numberPadsX+"x"+pad2(numberPadsY)+" "+rasterMm+"mm double row, "+numbering+"\")");
 WScript.Echo("  (fp_text reference REF** (at "+centerX+" -6.096) (layer F.SilkS)");
 WScript.Echo("    (effects (font (size 1 1) (thickness 0.15)))");
 WScript.Echo("  )");
-WScript.Echo("  (fp_text value Pin_Header_"+StraightVsAngle+"_Shrouded_"+numberPadsX+"x"+pad2(numberPadsY)+"_Pitch"+rasterMm+"mm_"+Numbering+" (at 4.826 5.08 90) (layer F.Fab) hide");
+WScript.Echo("  (fp_text value Pin_Header_"+StraightVsAngle+"_Shrouded_"+LocksVsNoLocks+numberPadsX+"x"+pad2(numberPadsY)+"_Pitch"+rasterMm+"mm_"+Numbering+" (at 4.826 5.08 90) (layer F.Fab) hide");
 WScript.Echo("    (effects (font (size 1 1) (thickness 0.15)))");
 WScript.Echo("  )");
 WScript.Echo("  (fp_text user %R (at "+centerX+" 5.08 90) (layer F.Fab)");
@@ -83,7 +87,8 @@ lenY = rasterMm * (numberPadsY-1);
     innerEndY = lenY + innerDelta;
 
     outerDeltaX = 3.13;
-    outerDeltaY = 5.07;
+    outerDeltaY = isLocked ? 10.92 : 5.07;
+    outerDeltaYCrtYrd = isLocked ? 11.12 : 5.27;
     outerEndX = lenX + outerDeltaX;
     outerEndY = lenY + outerDeltaY;
 
@@ -106,7 +111,7 @@ lenY = rasterMm * (numberPadsY-1);
         WScript.Echo("  (fp_line (start "+baseX+" "+(-baseH)+") (end "+baseX+" "+baseH+") (layer F.Fab) (width 0.15))");
 
         RectXYXY(-1.143, -1.143, lenX+1.65, lenY+1.143, "F.CrtYd", 0.15); // pins
-        RectXYXY(lenX+1.65, -5.27, lenX+10.76, lenY+5.27, "F.CrtYd", 0.15); // housing
+        RectXYXY(lenX+1.65, -outerDeltaYCrtYrd, lenX+10.76, lenY+outerDeltaYCrtYrd, "F.CrtYd", 0.15); // housing
     }
     else {
         // inner box
@@ -119,7 +124,7 @@ lenY = rasterMm * (numberPadsY-1);
         WScript.Echo("  (fp_line (start -2.794 0.508) (end -2.794 -0.508) (layer F.Fab) (width 0.1))");
         WScript.Echo("  (fp_line (start "+(-innerDelta)+" 0) (end -2.794 0.508) (layer F.Fab) (width 0.1))");
 
-        RectDxDy(3.33, 5.27, "F.CrtYd", 0.05);
+        RectDxDy(3.33, outerDeltaYCrtYrd, "F.CrtYd", 0.05);
     }
 }
 
