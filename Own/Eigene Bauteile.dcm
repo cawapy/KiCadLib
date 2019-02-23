@@ -36,6 +36,10 @@ D 4Kb FRAM Serial Memory
 K Ferroelectric Nonvolatile RAM I2C
 $ENDCMP
 #
+$CMP FP2800A-Interface
+D FP2800A-Interface
+$ENDCMP
+#
 $CMP Itron-MC03216
 D 32x16 VFD DotMatrix Display
 K VFD ISE Noritake Itron
