@@ -59,6 +59,12 @@ $CMP SN74LVC1G04
 D 1x Inverter Gate
 $ENDCMP
 #
+$CMP SR28GR
+D Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
 $CMP UFP2810
 D Control and Supply Interface for FP2800A
 $ENDCMP
